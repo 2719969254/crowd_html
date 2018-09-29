@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="http://www.pintuer.com/css/pintuer.css">
+		<script src="http://www.pintuer.com/js/jquery.js"></script>
+		<script src="http://www.pintuer.com/js/pintuer.js"></script>
+		<script src="http://www.pintuer.com/plugins/respond.js"></script>
+		<link type="image/x-icon" href="http://www.pintuer.com/favicon.ico" rel="shortcut icon" />
+		<!--<link href="http://www.pintuer.com/favicon.ico" rel="bookmark icon" />-->
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+
+		<title></title>
+		<style>
+			.demo-nav.fixed.fixed-top {
+				z-index: 8;
+				background: #fff;
+				width: 100%;
+				padding: 0;
+				border-bottom: solid 3px #0a8;
+				-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .175);
+				box-shadow: 0 3px 6px rgba(0, 0, 0, .175);
+			}
+		</style>
+		<title></title>
+	</head>
+
+	<body>
+		<div class="container padding-top padding-bottom">
+			<!--
+            	作者：2719969254@qq.com
+            	时间：2018-09-20
+            	描述：导航
+            -->
+			<div class="demo-nav padding-big-top padding-big-bottom fixed">
+				<div class="line">
+					<div class="xl12 xs3 xm3 xb2">
+						<button class="button icon-navicon float-right" data-target="#header-demo"></button>
+						<a target="_blank" href=#><img src="images/LOGO.jpg" alt="前端CCS框架" /></a>
+					</div>
+					<div class=" xl12 xs9 xm9 xb10 nav-navicon" id="header-demo">
+
+						<div class="xs8 xm6 xb5 padding-small">
+							<ul class="nav nav-menu nav-inline nav-big">
+								<li>
+									<a href=#>首页</a>
+								</li>
+								<li>
+									<a href=#>CSS</a>
+								</li>
+								<li class="active">
+									<a href=#>元件<span class="arrow"></span></a>
+									<ul class="drop-menu">
+										<li>
+											<a href=#>概述</a>
+										</li>
+										<li>
+											<a href=#>网格系统<span class="arrow"></span></a>
+											<ul>
+												<li>
+													<a href=#>响应式布局</a>
+												</li>
+												<li>
+													<a href=#>非响应式布局</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href=#>图标</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href=#>更多<span class="arrow"></span></a>
+									<ul class="drop-menu">
+										<li>
+											<a href=#>组件</a>
+										</li>
+										<li>
+											<a href=#>模块<span class="arrow"></span></a>
+											<ul>
+												<li>
+													<a href=#>头部</a>
+												</li>
+												<li>
+													<a href=#>导航</a>
+												</li>
+												<li>
+													<a href=#>底部</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="xs4 xm3 xb4">
+							<form>
+								<div class="input-group padding-little-top">
+									<input type="text" class="input border-main" name="keywords" size="30" placeholder="关键词" />
+									<span class="addbtn"><button type="button" class="button bg-main icon-search"></button></span>
+								</div>
+							</form>
+						</div>
+						<div class="hidden-l hidden-s xm3 xb3">
+							<div class="text-red text-big icon-phone height-large text-right"> 热线 400 1234567</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--
+            	作者：2719969254@qq.com
+            	时间：2018-09-20
+            	描述：表单开始
+            -->
+
+			<form method="post">
+				<div class="form-group">
+					<div class="label">
+						<label for="username">
+						姓名</label>
+					</div>
+					<div class="field">
+						<input type="text" class="input" id="username" name="username" size="50" placeholder="您的真实姓名" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label">
+						<label for="password">
+						称呼</label>
+					</div>
+					<div class="field">
+						<div class="button-group radio">
+							<label class="button active">
+								<input name="gender" value="sir" checked="checked" type="radio"><span class="icon icon-male"></span> 先生
+							</label>
+							<label class="button">
+								<input name="gender" value="miss" type="radio"><span class="icon icon-female"></span> 女士
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="label">
+						<label for="phone">
+						联系电话</label>
+					</div>
+					<div class="field">
+						<input type="text" class="input" id="phone" name="phone" size="50" placeholder="你的联系电话" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="label">
+						<label for="income">
+							联系地址
+						</label>
+					</div>
+					<div class="outer">
+						<select name="province" id="province" size="1">
+							<option value="请选择">山西省</option>
+						</select>
+						<select name="city" id="city" size="">
+							<option value="请选择">太原市</option>
+						</select>
+						<select name="town" id="town">
+							<option value="请选择">迎泽区</option>
+						</select>
+						<input type="text" class="input" id="place" name="place" size="50" placeholder="详细收货地址" />
+					</div>
+				</div>
+					<!--<button class="button">提交</button>-->
+				<div class="form-button" align="center" id="canyu_sub">
+					提交
+				</div>
+			</form>
+			<!--
+            	作者：2719969254@qq.com
+            	时间：2018-09-20
+            	描述：为了撑起下面被挡内容
+            -->
+			<div style="height: 80px;"></div>
+			<!--
+        	作者：2719969254@qq.com
+        	时间：2018-09-20
+        	描述：表单开始
+       -->
+			<!--
+        	作者：2719969254@qq.com
+        	时间：2018-09-20
+        	描述：底部开始
+        -->
+			<div style="height: 80px;"></div>
+			
+			
+			<nav class="mui-bar mui-bar-tab" id="nav">
+				<a onclick="window.location.href='index_pro.html'" id="tab_home" class="mui-tab-item mui-active">
+					<span class="mui-icon mui-icon-home"onclick="window.location.href='index_pro.html'"></span>
+					<span class="mui-tab-label" onclick="window.location.href='index_pro.html'">首页</span>
+				</a>
+				<a id="tab_contact" class="mui-tab-item" onclick="window.location.href='index_chat.html'">
+					<span class="mui-icon mui-icon-contact"onclick="window.location.href='index_chat.html'"></span>
+					<span class="mui-tab-label" onclick="window.location.href='index_chat.html'">消息</span>
+				</a>
+				<a href="setting.html" id="tab_setting" class="mui-tab-item"onclick="window.location.href='setting.html'">
+					<span class="mui-icon mui-icon-gear"onclick="window.location.href='setting.html'"></span>
+					<span class="mui-tab-label" onclick="window.location.href='setting.html'">我的</span>
+				</a>
+			</nav>
+			<!--
+        	作者：2719969254@qq.com
+        	时间：2018-09-20
+        	描述：底部结束
+        -->
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('#canyu_sub').on('click', function() {
+			var i = window.confirm("参加成功，是否查看推荐车队协助您的运输");
+			if(i != 0) {
+				window.location.href = "tuijian.html";
+			}
+		});
+	</script>
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="js/area.js"></script>
+	<script src="js/select.js"></script>
+
+</html>

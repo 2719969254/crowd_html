@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/chat.css">
+		<link rel="stylesheet" href="css/fontSetting.css">
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div id="page-fou" class="page page-four">
+			<nav class="navbar navbar-fixed-top">
+				<p class="navbar-text">消息</p>
+				<div class="navbar-header navbar-right">
+					<a name="search" class="navbar-brand" href="#">
+						<span class="glyphicon glyphicon-search"></span>
+					</a>
+				</div>
+			</nav>
+			<div class="ms-body">
+				<ul class="list-group">
+					<li class="list-group-item">
+						<span class="badge">56</span>
+						<img src="img/header/h1.jpg" alt="header">
+						<div>
+							<p><strong>老张</strong></p>
+							<span>我要购买20吨玉米</span>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<span class="badge">5</span>
+						<img src="img/header/h2.jpg" alt="header">
+						<div>
+							<p><strong>小王</strong></p>
+							<span>土豆价格还能再低点吗</span>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<span class="badge">6</span>
+						<img src="img/header/h3.jpg" alt="header">
+						<div>
+							<p><strong>李老板</strong></p>
+							<span>好的，合作愉快！</span>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<span class="badge">20</span>
+						<img src="img/header/h4.jpg" alt="header">
+						<div>
+							<p><strong>^(*￣(oo)￣)^</strong></p>
+							<span>想问一下能联系多少辆运输车辆</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--
+        	作者：2719969254@qq.com
+        	时间：2018-09-19
+        	描述：底部模板
+      -->
+
+		<nav class="mui-bar mui-bar-tab" id="nav">
+			<a onclick="window.location.href='index_pro.html'" id="tab_home" class="mui-tab-item mui-active">
+				<span class="mui-icon mui-icon-home" onclick="window.location.href='index_pro.html'"></span>
+				<span class="mui-tab-label" onclick="window.location.href='index_pro.html'">首页</span>
+			</a>
+			<a id="tab_contact" class="mui-tab-item" onclick="window.location.href='index_chat.html'">
+				<span class="mui-icon mui-icon-contact" onclick="window.location.href='index_chat.html'"></span>
+				<span class="mui-tab-label" onclick="window.location.href='index_chat.html'">消息</span>
+			</a>
+			<a href="setting.html" id="tab_setting" class="mui-tab-item" onclick="window.location.href='setting.html'">
+				<span class="mui-icon mui-icon-gear" onclick="window.location.href='setting.html'"></span>
+				<span class="mui-tab-label" onclick="window.location.href='setting.html'">我的</span>
+			</a>
+		</nav>
+
+		<script src="dist/jquery-3.3.1.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/por.js"></script>
+		<script src="js/getShop.js"></script>
+		<script src="js/getSort.js"></script>
+		<script type="text/javascript">
+			$(".ms-body .list-group-item").click(function() {
+				window.location.href = "chat.html";
+			});
+		</script>
+	</body>
+
+</html>
