@@ -1,7 +1,8 @@
 $(function () {
     console.log($.getUrlParam('id'));
     $.ajax({
-        //url: "http://47.95.234.255:8080/crowdfunding/selectInitiate",
+
+        //url: "http://47.95.234.255:8080/crowd/selectInitiateById?id=" + $.getUrlParam('id') + "",
         url: "http://localhost/selectInitiateById?id=" + $.getUrlParam('id') + "",
         dataType: "json",
         success: function (data) {

@@ -1,6 +1,7 @@
 $(function () {
     $.ajax({
-        //url: "http://47.95.234.255:8080/crowdfunding/selectInitiate",
+        // TODO: 2018/10/1 上传服务器需要修改之处
+        //url: "http://47.95.234.255:8080/crowd/selectInitiate",
         url: "http://localhost/selectInitiate",
         dataType: "json",
         success: function (data) {
@@ -26,7 +27,7 @@ $(function () {
 
 function detailed() {
     $.ajax({
-        url: "http://localhost/addInitiate",
+        url: "http://47.95.234.255:8080/crowd/addInitiate",
         success: function () {
             location.href = "index.html?id=" + id
 

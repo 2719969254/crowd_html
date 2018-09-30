@@ -3,8 +3,8 @@ function publish() {
     console.log(JSON.stringify($('#form1').serializeJSON()));
     //	console.log(JSON.stringify($('#form1').serialize().replace(/=/g, ':').split("&")));
     $.ajax({
-        //  	url: "http://47.95.234.255:8080/crowdfunding/addInitiate",
-
+        // TODO: 2018/10/1 上传服务器需要修改之处
+        //url: "http://47.95.234.255:8080/crowd/addInitiate",
         url: "http://localhost/addInitiate",
         dataType: "json",
         data: $('#form1').serialize(),
@@ -19,6 +19,8 @@ function upload() {
     var formData = new FormData();
     formData.append('file', $('#file')[0].files[0]); //从div input 中取得
     $.ajax({
+        // TODO: 2018/10/1 上传服务器需要修改之处
+        //url: 'http://47.95.234.255:8080/crowd/upLoad',
         url: 'http://localhost/upLoad',
         type: 'POST',
         cache: false,
