@@ -242,8 +242,21 @@
 <script type="text/javascript" src="js/get_url.js"></script>
 <script src="js/canyu_list.js"></script>
 
+<script type="text/javascript"
+        src="https://webapi.amap.com/maps?v=1.4.10&key=4365c54b6a5163b71beb724fe4f26471&plugin=AMap.Autocomplete"></script>
+<script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
 <script type="text/javascript">
-
+    //输入提示
+    var auto = new AMap.Autocomplete({
+        input: "tipinput"
+    });
+</script>
+<script type="text/javascript">
+    console.log("111");
+    //输入提示
+    var auto = new AMap.Autocomplete({
+        input: "place"
+    });
 </script>
 
 <script src="js/area.js"></script>

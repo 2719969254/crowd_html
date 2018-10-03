@@ -13,13 +13,13 @@ $(function () {
 
 $('#canyu_sub').on('click', function () {
     $.ajax({
-       url:"http://localhost/insertActivity?pid=" + $.getUrlParam('id'),
+       url:"http://localhost/insertActivity?pid=" + encodeURI(encodeURI($.getUrlParam('id'))) ,
         dataType:"json",
         data:$('#canyu_form').serialize(),
         success:function () {
             let i = window.confirm("参加成功，是否查看推荐车队协助您的运输");
             if (i !== false) {
-                window.location.href = "tuijian.html";
+                window.location.href = "tuijian.html?place="+document.getElementById("town").value;
             }
         }
     });

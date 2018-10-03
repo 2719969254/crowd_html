@@ -234,6 +234,15 @@
         </a>
     </nav>
 </div>
+<script type="text/javascript"
+        src="https://webapi.amap.com/maps?v=1.4.10&key=4365c54b6a5163b71beb724fe4f26471&plugin=AMap.Autocomplete"></script>
+<script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+<script type="text/javascript">
+    //输入提示
+    var auto = new AMap.Autocomplete({
+        input: "tipinput"
+    });
+</script>
 <script>
     var calendar = new lCalendar();
     calendar.init({

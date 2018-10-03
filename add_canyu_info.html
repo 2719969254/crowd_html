@@ -13,6 +13,14 @@
     <link href="http://www.pintuer.com/favicon.ico" rel="bookmark icon" />
     <script src="js/mui.min.js"></script>
     <link href="css/mui.min.css" rel="stylesheet" />
+    <script src="http://www.pintuer.com/js/jquery.js"></script>
+    <script src="http://www.pintuer.com/js/pintuer.js"></script>
+    <script src="http://www.pintuer.com/plugins/respond.js"></script>
+    <script type="text/javascript" src="js/get_url.js"></script>
+    <script src="js/add_canyu_info.js"></script>
+
+
+
     <style>
         .demo-nav.fixed.fixed-top {
             z-index: 8;
@@ -73,6 +81,15 @@
                 </tr>
 
                 <tr id="openargument">
+                    <td>地点</td>
+                    <td>
+                        <div id="place" class="place"></div>
+                    </td>
+
+                    <td><span class="glyphicon glyphicon-menu-right"></span></td>
+                </tr>
+
+                <tr id="openargument">
                     <td>描述</td>
                     <td>
                         <div id="div_desc"></div>
@@ -122,6 +139,11 @@
     </div>
 </div>-->
     <!--商品详情-->
+    <p class="spxq">————地址————</p>
+
+    <iframe src=""  style="height: 500px; width: 400px"></iframe>
+    <!--给iframe标签的src属性赋值-->
+
     <p class="spxq">————详情————</p>
     <div id="informationimg" class="jumbotron infor">
         <img src="images/yumi_info3.jpg" />
@@ -169,11 +191,13 @@
     </div>
 </div>
 </body>
-<script src="http://www.pintuer.com/js/jquery.js"></script>
-<script src="http://www.pintuer.com/js/pintuer.js"></script>
-<script src="http://www.pintuer.com/plugins/respond.js"></script>
-<script type="text/javascript" src="js/get_url.js"></script>
-<script src="js/add_canyu_info.js"></script>
+
+
+
+<script>
+    /* console.log(document.getElementById('place').innerHTML);*/
+
+</script>
 
 <script type="text/javascript">
     $('#buy').on('click', function() {

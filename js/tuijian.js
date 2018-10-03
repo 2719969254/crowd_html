@@ -1,102 +1,42 @@
-var getLocation = function (successFunc, errorFunc) { //successFunc获取定位成功回调函数，errorFunc获取定位失败回调
-    //首先设置默认城市
-    var defCity = {
-        id: '000001',
-        name: '北京市',
-        date: curDateTime()//获取当前时间方法
-    };
-    //默认城市
-    $.cookie('VPIAO_MOBILE_DEFAULTCITY', JSON.stringify(defCity), { expires: 1, path: '/' });
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-                var lat = position.coords.latitude;
-                var lon = position.coords.longitude;
-                //var map = new BMap.Map("container");   // 创建Map实例
-                var point = new BMap.Point(lon, lat); // 创建点坐标
-                var gc = new BMap.Geocoder();
-                gc.getLocation(point, function (rs) {
-                    var addComp = rs.addressComponents;
-                    var curCity = {
-                        id: '',
-                        name: addComp.province,
-                        date: curDateTime()
-                    };
-                    //当前定位城市
-                    $.cookie('VPIAO_MOBILE_CURRENTCITY', JSON.stringify(curCity), { expires: 7, path: '/' });
-                    //alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street);
-                    if (successFunc != undefined)
-                        successFunc(addComp);
-                });
-            },
-            function (error) {
-                switch (error.code) {
-                    case 1:
-                        alert("位置服务被拒绝。");
-                        break;
-                    case 2:
-                        alert("暂时获取不到位置信息。");
-                        break;
-                    case 3:
-                        alert("获取位置信息超时。");
-                        break;
-                    default:
-                        alert("未知错误。");
-                        break;
-                }
-                var curCity = {
-                    id: '000001',
-                    name: '北京市',
-                    date: curDateTime()
-                };
-                //默认城市
-                $.cookie('VPIAO_MOBILE_DEFAULTCITY', JSON.stringify(curCity), { expires: 1, path: '/' });
-                if (errorFunc != undefined)
-                    errorFunc(error);
-            }, { timeout: 5000, enableHighAccuracy: true });
-    } else {
-        alert("你的浏览器不支持获取地理位置信息。");
-        if (errorFunc != undefined)
-            errorFunc("你的浏览器不支持获取地理位置信息。");
-    }
-};
-var showPosition = function (position) {
-    var lat = position.coords.latitude;
-    var lon = position.coords.longitude;
-    //var map = new BMap.Map("container");   // 创建Map实例
-    var point = new BMap.Point(lon, lat); // 创建点坐标
-    var gc = new BMap.Geocoder();
-    gc.getLocation(point, function (rs) {
-        var addComp = rs.addressComponents;
-        var curCity = {
-            id: '',
-            name: addComp.province,
-            date: curDateTime()
-        };
-        //当前定位城市
-        $.cookie('VPIAO_MOBILE_CURRENTCITY', JSON.stringify(curCity), { expires: 7, path: '/' });
-        //alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street);
+/*$(function () {
+    let map = new AMap.Map("container", {
+        resizeEnable: true,
+        center: [116.397428, 39.90923],
+        zoom: 13
     });
-};
-var showPositionError = function (error) {
-    switch (error.code) {
-        case 1:
-            alert("位置服务被拒绝。");
-            break;
-        case 2:
-            alert("暂时获取不到位置信息。");
-            break;
-        case 3:
-            alert("获取位置信息超时。");
-            break;
-        default:
-            alert("未知错误。");
-            break;
+
+//获取用户所在城市信息
+    function showCityInfo() {
+        //实例化城市查询类
+        var citysearch = new AMap.CitySearch();
+        //自动获取用户IP，返回当前城市
+        citysearch.getLocalCity(function (status, result) {
+            if (status === 'complete' && result.info === 'OK') {
+                if (result && result.city && result.bounds) {
+                    let cityinfo = result.city;
+                    let citybounds = result.bounds;
+                     document.getElementById('info').innerHTML = '您当前所在城市：' + cityinfo;
+                    console.log(cityinfo);
+                    //地图显示当前城市
+                    map.setBounds(citybounds);
+                }
+            } else {
+                document.getElementById('info').innerHTML = result.info;
+            }
+        });
     }
-    var curCity = {
-        id: '000001',
-        name: '北京市',
-        date: curDateTime()
-    };
-    //默认城市
-    $.cookie('VPIAO_MOBILE_DEFAULTCITY', JSON.stringify(curCity), { expires: 1, path: '/' });
-};
+
+    showCityInfo();
+});*/
+
+$('#buy').on('click', function () {
+    var i = window.confirm("预约成功，是否立即与发起方取得联系");
+    if (i != 0) {
+        /*window.location.href="index.html";*/
+        window.location.href = "tel:15364882057";
+    }
+});
+$('#add').on('click', function () {
+    var i = window.confirm("稍后将继续提醒您预约此批货车");
+});
+

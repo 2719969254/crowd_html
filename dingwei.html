@@ -14,15 +14,15 @@
 </head>
 <body>
 <div id="container"></div>
-<div class="info">
+<!--<div class="info">
     <p id='info'></p>
-</div>
+</div>-->
 <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.10&key=4365c54b6a5163b71beb724fe4f26471&plugin=AMap.CitySearch"></script>
 <script type="text/javascript">
     let map = new AMap.Map("container", {
         resizeEnable: true,
         center: [116.397428, 39.90923],
-        zoom: 13
+        zoom: 20
     });
 
     //获取用户所在城市信息
@@ -35,7 +35,7 @@
                 if (result && result.city && result.bounds) {
                     let cityinfo = result.city;
                     let citybounds = result.bounds;
-                    document.getElementById('info').innerHTML = '您当前所在城市：'+cityinfo;
+                   // document.getElementById('info').innerHTML = '您当前所在城市：'+cityinfo;
                     console.log(cityinfo);
                     //地图显示当前城市
                     map.setBounds(citybounds);
