@@ -4,17 +4,15 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-    <link rel="stylesheet" href="css/iconfont.css"/>
-    <link rel="stylesheet" href="css/details_sp.css"/>
-    <script src="http://www.pintuer.com/js/jquery.js"></script>
-    <script src="http://www.pintuer.com/js/pintuer.js"></script>
-    <script src="http://www.pintuer.com/plugins/respond.js"></script>
-    <link type="image/x-icon" href="http://www.pintuer.com/favicon.ico" rel="shortcut icon"/>
-    <link href="http://www.pintuer.com/favicon.ico" rel="bookmark icon"/>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/iconfont.css" />
+    <link rel="stylesheet" href="css/details_sp.css" />
+
+    <link type="image/x-icon" href="http://www.pintuer.com/favicon.ico" rel="shortcut icon" />
+    <link href="http://www.pintuer.com/favicon.ico" rel="bookmark icon" />
     <script src="js/mui.min.js"></script>
-    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/mui.min.css" rel="stylesheet" />
     <style>
         .demo-nav.fixed.fixed-top {
             z-index: 8;
@@ -51,7 +49,7 @@
     <!--商品的大图轮播-->
     <div class="jumbotron commodity_img">
         <div id="coverimg" class="carousel-inner" role="listbox">
-
+            <img src="images/yumi_info.jpg" />
         </div>
     </div>
     <!--商品基本介绍-->
@@ -126,13 +124,13 @@
     <!--商品详情-->
     <p class="spxq">————详情————</p>
     <div id="informationimg" class="jumbotron infor">
-        <img src="images/gaoliang3.jpg"/>
-        <br/>
-        <br/>
-        <img src="images/gaoliang2.jpg"/>
-        <br/>
-        <br/>
-        <img src="images/gaoliang1.jpg"/>
+        <img src="images/yumi_info3.jpg" />
+        <br />
+        <br />
+        <img src="images/yumi_info2.jpg" />
+        <br />
+        <br />
+        <img src="images/yumi_info.jpg" />
     </div>
     <div class="dd">
         <p>————到底了————</p>
@@ -166,31 +164,30 @@
     <a class="col-xs-2"><i class="iconfont icon-buoumaotubiao44"></i></a>
     <a class="col-xs-4"></a>
     <div class="col-xs-6 btn-group">
-        <button id="buy" class="btn">立即购买</button>
-        <button id="add" class="btn">提前预定</button>
+        <button id="buy" class="btn">立即参与</button>
+        <button id="add" class="btn">提前询问</button>
     </div>
 </div>
 </body>
-
+<script src="http://www.pintuer.com/js/jquery.js"></script>
+<script src="http://www.pintuer.com/js/pintuer.js"></script>
+<script src="http://www.pintuer.com/plugins/respond.js"></script>
 <script type="text/javascript" src="js/get_url.js"></script>
-<script src="js/add_info.js"></script>
-
+<script src="js/add_canyu_info.js"></script>
 
 <script type="text/javascript">
-    $('#buy').on('click', function () {
-        window.location.href = "buy.html";
+    $('#buy').on('click', function() {
+        window.location.href = "canyu_list.html"+"?id="+$.getUrlParam('id');
     });
 </script>
 
 <script type="text/javascript">
-    $('#add').on('click', function () {
-        let i = window.confirm("预定成功，是否立即与发起方取得联系");
-        if (0 !== i) {
-            window.location.href = "tel:15364882057";
+    $('#add').on('click', function() {
+        var i = window.confirm("预定成功，是否立即与发起方取得联系");
+        if(i != 0){
+            window.location.href="tel:15364882057";
         }
     });
 </script>
-<!--<script src="js/tijiao.js"></script>
-<script src="js/template-web.js"></script>-->
 
 </html>
