@@ -13,7 +13,8 @@ $(function () {
 
 $('#canyu_sub').on('click', function () {
     $.ajax({
-       url:"http://localhost/insertActivity?pid=" + encodeURI(encodeURI($.getUrlParam('id'))) ,
+        // todo
+       url:"http://47.95.234.255:8080/crowd/insertActivity?pid=" + encodeURI(encodeURI($.getUrlParam('id'))) ,
         dataType:"json",
         data:$('#canyu_form').serialize(),
         success:function () {

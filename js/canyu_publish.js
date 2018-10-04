@@ -1,8 +1,8 @@
 $(function () {
     $.ajax({
         // TODO: 2018/10/1 上传服务器需要修改之处
-        //url: "http://47.95.234.255:8080/crowd/selectInitiate",
-        url: "http://localhost/selectInitiate",
+        url: "http://47.95.234.255:8080/crowd/selectInitiate",
+        //url: "http://localhost/selectInitiate",
         dataType: "json",
         success: function (data) {
             var t1 = document.getElementById("name_1").innerHTML;
