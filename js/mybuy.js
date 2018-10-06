@@ -1,7 +1,8 @@
 $(function() {
 	$.ajax({
-		//url: "http://47.95.234.255:8080/crowdfunding/selectInitiate",
-		url: "http://localhost/selectInitiate",
+		//TODO
+		url: "http://47.95.234.255:8080/crowdfunding/selectInitiate",
+        //url: "http://localhost/selectInitiate",
 		dataType: "json",
 		success: function(data) {
 			var t1 = document.getElementById("name_1").innerHTML;
